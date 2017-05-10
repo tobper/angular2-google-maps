@@ -72,7 +72,7 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit {
   /**
    * Icon (the URL of the image) for the foreground.
    */
-  @Input() iconUrl: string;
+  @Input() icon: string|mapTypes.Icon|mapTypes.GoogleSymbol;
 
   /**
    * If true, the marker is visible
@@ -178,7 +178,7 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit {
     if (changes['draggable']) {
       this._markerManager.updateDraggable(this);
     }
-    if (changes['iconUrl']) {
+    if (changes['icon']) {
       this._markerManager.updateIcon(this);
     }
     if (changes['opacity']) {

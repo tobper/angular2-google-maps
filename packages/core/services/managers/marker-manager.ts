@@ -48,7 +48,7 @@ export class MarkerManager {
   }
 
   updateIcon(marker: AgmMarker): Promise<void> {
-    return this._markers.get(marker).then((m: Marker) => m.setIcon(marker.iconUrl));
+    return this._markers.get(marker).then((m: Marker) => m.setIcon(marker.icon));
   }
 
   updateOpacity(marker: AgmMarker): Promise<void> {
@@ -82,7 +82,7 @@ export class MarkerManager {
       position: {lat: marker.latitude, lng: marker.longitude},
       label: marker.label,
       draggable: marker.draggable,
-      icon: marker.iconUrl,
+      icon: marker.icon,
       opacity: marker.opacity,
       visible: marker.visible,
       zIndex: marker.zIndex,
