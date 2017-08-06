@@ -59,7 +59,7 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit {
   @Input() title: string;
 
   /**
-   * The label (a single uppercase character) for the marker.
+   * The label for the marker. Either a single uppercase character or a marker label.
    */
   @Input() label: string|mapTypes.MarkerLabel;
 
@@ -70,7 +70,7 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit {
   @Input('markerDraggable') draggable: boolean = false;
 
   /**
-   * Icon (the URL of the image) for the foreground.
+   * Icon for the foreground. Either the URL of the image, an icon or a symbol.
    */
   @Input() icon: string|mapTypes.Icon|mapTypes.GoogleSymbol;
 
