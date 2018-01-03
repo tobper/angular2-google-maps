@@ -1,6 +1,7 @@
 export {AgmMap} from './directives/map';
 export {AgmCircle} from './directives/circle';
 export {AgmInfoWindow} from './directives/info-window';
+export {AgmImageMapType} from './directives/image-map-type';
 export {AgmKmlLayer} from './directives/kml-layer';
 export {AgmDataLayer} from './directives/data-layer';
 export {AgmMarker} from './directives/marker';

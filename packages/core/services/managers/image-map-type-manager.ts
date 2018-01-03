@@ -10,8 +10,8 @@ export class ImageMapTypeManager {
 
   }
 
-  addMapType(id: string, options: mapTypes.ImageMapTypeOptions) {
-    this._mapsWrapper.setMapTypes(id, options);
+  setImageMapType(id: string, options: mapTypes.ImageMapTypeOptions) {
+    this._mapsWrapper.setImageMapType(id, options);
   }
 
 }

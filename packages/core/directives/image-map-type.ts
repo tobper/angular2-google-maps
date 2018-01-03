@@ -43,7 +43,7 @@ export class AgmImageMapType implements OnChanges {
   constructor(private _mapTypeManager: ImageMapTypeManager) {}
 
   /* @internal */
-  ngOnChanges() { this._mapTypeManager.addMapType(this.mapLayerId, this.options); }
+  ngOnChanges() { this._mapTypeManager.setImageMapType(this.mapLayerId, this.options); }
 
   /** @internal */
   toString(): string { return 'ImageMapType-' + this.mapLayerId.toString(); }

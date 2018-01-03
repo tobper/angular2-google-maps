@@ -560,22 +560,22 @@ export interface FullscreenControlOptions {
 
 export interface MapTypeRegistry { set(id: string, mapType: any): void; }
 
-export interface ImageMapTypeCoord {
+export interface ImageMapTypePoint {
   x: number;
   y: number;
 }
 
-export interface ImageMapTypeTileSize {
+export interface ImageMapTypeSize {
   height: number;
   width: number;
 }
 
 export interface ImageMapTypeOptions {
-  tileSize?: ImageMapTypeTileSize;
-  maxZoom: number;
-  minZoom: number;
-  radius: number;
-  name: string;
   alt?: string;
-  getTileUrl(coord: ImageMapTypeCoord, zoom: number): string;
+  maxZoom?: number;
+  minZoom?: number;
+  name?: string;
+  opacity?: number;
+  tileSize?: ImageMapTypeSize;
+  getTileUrl(tileCoord: ImageMapTypePoint, zoom: number): string;
 }

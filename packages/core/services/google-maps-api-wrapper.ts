@@ -155,17 +155,9 @@ export class GoogleMapsAPIWrapper {
     return this._map.then((m) => google.maps.event.trigger(m, eventName));
   }
 
-  setMapTypes(id: string, options: mapTypes.ImageMapTypeOptions): Promise<void> {
+  setImageMapType(id: string, options: mapTypes.ImageMapTypeOptions): Promise<void> {
     return this._map.then((map: mapTypes.GoogleMap) => {
-      let mapType = new google.maps.ImageMapType({
-          getTileUrl: options.getTileUrl,
-          tileSize: options.tileSize,
-          maxZoom: options.maxZoom,
-          minZoom: options.minZoom,
-          radius: options.radius,
-          name: options.name,
-          alt: options.alt
-      });
+      let mapType = new google.maps.ImageMapType(options);
       map.mapTypes.set(id, mapType);
     });
   }
